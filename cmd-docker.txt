@@ -1,0 +1,36 @@
+Docker:
+
+1. create files:
+[Dockerfile, .dockerignore]
+
+2. execute:
+
++, build image from Dockerfile:
+docker build -t <name-image>:<version> .
+
++, get  list iamges:
+docker images
+
++,  run docker image:
+docker run -p <external-access-port>:<expose-port(defined in Dockerfile)> <docker-image-name>:<docker-image-version>
+
++, remove image:
+docker image rm <docker-image-id>
+
++, stop comtainer:
+
++, get list containers are running:
+docker ps
+
++, get list containers were stoped and are running:
+docker ps -a
+
++, remove docker container:
+docker container rm <container-id>
+
++, stop docker container which is running:
+docker container stop <container-id>
+
++, start docker container which is existed and is stopping:
+docker start -i <container-id>
+

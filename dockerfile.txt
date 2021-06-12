@@ -1,0 +1,21 @@
+# pull node image has tag(version) = 14
+FROM node:14
+
+# create path in docker environment, which store code project
+WORKDIR code/app
+
+# copy package*.json into the path above
+COPY package*.json ./
+
+# copy all file into the path above
+COPY . .
+
+# setup libs in package.json file
+RUN npm install
+
+# export the port run docker environment
+EXPOSE 3009
+
+# run cmd
+CMD ["npm", "run", "dev"]
+
